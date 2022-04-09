@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    username: root
+    password: password
+    url: jdbc:mysql://localhost:3306/gulimall_sms?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:
+        server-addr: localhost:8848 #Nacos作为配置中心地址
+        group: DEFAULT_GROUP
+  application:
+    name: gulimall-coupon
