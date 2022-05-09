@@ -8,11 +8,11 @@
         <artifactId>gulimall</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>com.atguigu</groupId>
+
     <artifactId>gulimall-order</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>gulimall-order</name>
-    <description>谷粒商城-优惠卷服务</description>
+    <description>谷粒商城-订单服务</description>
 
     <dependencies>
         <dependency>
@@ -36,7 +36,10 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

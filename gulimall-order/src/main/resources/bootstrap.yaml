@@ -1,4 +1,9 @@
 spring:
+  datasource:
+    username: root
+    password: password
+    url: jdbc:mysql://localhost:3306/gulimall_oms?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
   cloud:
     nacos:
       discovery:

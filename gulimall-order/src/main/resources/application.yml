@@ -4,14 +4,30 @@ spring:
     password: password
     url: jdbc:mysql://localhost:3306/gulimall_oms?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.cj.jdbc.Driver
-
+  application:
+    name: gulimall-order
 
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml
   global-config:
     db-config:
+      select-strategy: not_empty
+      insert-strategy: not_empty
+      update-strategy: not_empty
       id-type: auto
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+  configuration:
+    cache-enabled: false
+    map-underscore-to-camel-case: true
+    use-column-label: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 
 server:
   port: 9000

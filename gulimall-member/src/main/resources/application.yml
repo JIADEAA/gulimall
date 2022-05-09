@@ -15,7 +15,17 @@ mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml
   global-config:
     db-config:
+      select-strategy: not_empty
+      insert-strategy: not_empty
+      update-strategy: not_empty
       id-type: auto
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+  configuration:
+    cache-enabled: false
+    map-underscore-to-camel-case: true
+    use-column-label: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 
 server:
